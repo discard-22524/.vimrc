@@ -213,6 +213,8 @@ nmap <F6> :call SyntasticSwitch()<CR>
 nmap <F7> :TagbarToggle<CR>
 "新建文件：
 nmap <F8> <C-w>hma
+"保存：
+map <C-r> <ESC>:w<CR>
 "
 "-------------------------本地设置-------------------------
 set number				"显示行号
