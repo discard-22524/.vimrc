@@ -24,6 +24,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'majutsushi/tagbar'
+Plugin 'mkitt/tabline.vim'
 
 "如果插件来自vim-scripts(官方)，写插件名就行了
 " Plugin 'L9'
@@ -93,7 +94,7 @@ let g:NERDTreeIndicatorMapCustom = {
 "
 "Airline设置(插件)
 let g:airline_powerline_fonts=1	"开启airline的字体支持
-let g:airline_theme="kolor"		"所使用的主题配色，我的是kolor
+let g:airline_theme="laederon"		"所使用的主题配色，我的是kolor
 set t_Co=256
 set encoding=utf-8
 set laststatus=2
@@ -158,8 +159,8 @@ endfunction
 "UltiSnips配置（插件）
 "解决快捷键失效问题：
 let g:UltiSnipsExpandTrigger       ="<c-tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+let g:UltiSnipsJumpForwardTrigger  ="<tab>"
+let g:UltiSnipsJumpBackwardTrigger ="<s-tab>"
 "将Tab设定为向下遍历候选项：
 function! g:UltiSnips_Complete()
 	call UltiSnips#ExpandSnippet()
@@ -202,9 +203,9 @@ nmap <F1> <C-w>h
 "向右移动分割的窗口焦点：
 nmap <F2> <C-w>l
 "切换到左边的标签页：
-nmap <F3> :w<CR>:bp<CR>
+nmap <F3> :bp<CR>
 "切换到右边的标签页：
-nmap <F4> :w<CR>:bn<CR>
+nmap <F4> :bn<CR>
 "NERDTree开关：
 nmap <F5> :call NERDTreeSwitch()<CR>
 "Syntastic开关：
@@ -213,8 +214,10 @@ nmap <F6> :call SyntasticSwitch()<CR>
 nmap <F7> :TagbarToggle<CR>
 "新建文件：
 nmap <F8> <C-w>hma
-"保存：
-map <C-r> <ESC>:w<CR>
+"关闭缓冲区：
+nmap <S-w> :bdelete<CR><C-w>h<C-w>l
+"退出Vim：
+nmap <S-q> :wqa<CR>
 "
 "-------------------------本地设置-------------------------
 set number				"显示行号
@@ -225,4 +228,6 @@ set invautoindent		"禁止与上一行相同的自动缩进
 set cindent				"按C语言风格缩进
 set incsearch			"查找时自动跳转到匹配的当前输入（敲回车前）
 set hlsearch			"高亮匹配的查找结果
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1	"字符编码
+set hidden				"光标间切换不需要保存
 syntax on				"开启语法高亮
