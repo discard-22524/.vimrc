@@ -44,8 +44,8 @@ Plugin 'majutsushi/tagbar'
 Ctrl+h|展开所选的代码片段
 Ctrl+j|下移补全候选列表光标
 Ctrl+k|上移补全候选列表光标
-Ctrl+q|关闭所有选项卡，保存并退出Vim
-Ctrl+w|关闭当前选项卡（会提示是否保存）
+Shift+q|关闭所有选项卡，保存并退出Vim
+Shift+w|关闭当前选项卡(会提示是否保存)
 F1 |向左移动窗口的焦点
 F2 |向右移动窗口的焦点
 F3 |切换到左侧的标签页
