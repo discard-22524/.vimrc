@@ -230,4 +230,5 @@ set incsearch			"查找时自动跳转到匹配的当前输入（敲回车前）
 set hlsearch			"高亮匹配的查找结果
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1	"字符编码
 set hidden				"光标间切换不需要保存
+set backspace=2         "解决插入模式下delete/backspce键失效问题
 syntax on				"开启语法高亮
